@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    font-family: "Inter", sans serif;
+    margin: 0;
+    padding: 5px;
+    /* Le border box permet d'avoir les élèments bien organisé, c'est peut être ce qu'il me manquait lors de mon TP*/
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+p {
+    font-size: 0.8;
+}
+
+body {
+    min-height: 100vh;
+    background: rgb(28, 22, 22);
+    color: rgb(222, 217, 217);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* 1er padding c'est haut bas et le deuxième c'est gauche droite */
+    padding: 10px 20px;
+}
+
+/* On ne met pas directement ul en dessous car cela prendrait tous les Ul de la page. Dans ce projet il n'y en a pas d'autre mais il faut tout de même prendre cette habitude. Cet Ul fait partie du nav donc on met les 2 */
+nav ul {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.header {
+    /* Le display Flex met tout côte à côte et est toujours accompagner des commandes AIC et JC */
+    display: flex;
+    justify-content: space-around;
+    margin: 30px auto;
+}
+
+.header-left {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+.header-left-container h3 {
+    color: #474dff;
+    font-size: 1.4rem;
+}
+
+.header-right {
+    width: 50%;
+}
+/* le # c'est pour les id et les points pour les class */
+#modem {
+  width: 100%;  
+}
+
+.infos{
+    display: flex;
+    background: rgb(10, 10, 10);
+    border-radius: 10px;
+}
+
+.infos-left {
+    width: 33%;
+}
+
+.btn-container {
+    margin: 5px auto;
+}
+
+button {
+    border: none;
+    background: #474dff;
+    color: antiquewhite;
+    width: 150px;
+    padding: 10px 0;
+    border-radius: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 5px;
+    display: block;
+}
+
+.infos-right {
+    width: 67%;
+
+}
+
+.investors {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+}
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.img-container img {
+    height: 60px;
+}
+
+/* ******MEDIA SCREEN*** */
+
+/* TAblet */
+@media screen and (max-width: 1023px) {
+    h1 {
+        font-size: 3rem;
+    }
+    .header-left-container {
+        font-size: 0.6rem;
+    }
+    .header-left-container h3 {
+        font-size: 1rem;
+    }
+}
+
+/* mobile */
+@media screen and (max-width:768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-left {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .infos {
+        display: block;
+        align-items: center;
+        text-align: center;
+        
+  }
+    h4 {
+        font-size: 0.9em;
+        font-weight: bold;
+  }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+    ul {
+        font-size: 0.8rem;
+    }
+    .infos-left {
+        width: 100%;
+    }
+
+    button {
+        margin: 5px auto;
+        }
+    .btn-container {
+        display: block;
+    }
+    
+    .infos-right {
+        width: 100%;
+    }
+    .img-container img {
+        height: 40px;
+    }
+    }
